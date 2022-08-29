@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Button } from "@mui/material";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <header>
+      <Box mt={50}>
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => navigate("/settings")}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Start Game
+        </Button>
+      </Box>
+    </header>
   );
 }
 
